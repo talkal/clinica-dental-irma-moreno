@@ -1,0 +1,146 @@
+/* ============================================
+   DENTAL CLINIC CUSTOM STYLES
+   Clínica Dental Doctora Irma Moreno
+   ============================================ */
+
+:root {
+  /* Brand Colors - Professional Dental Theme */
+  --color-primary: #0066b2;
+  --color-primary-dark: #004d8a;
+  --color-primary-light: #3385c3;
+  --color-primary-lighter: #e6f2f9;
+
+  --color-secondary: #00a896;
+  --color-secondary-dark: #008577;
+  --color-secondary-light: #33baa8;
+
+  --color-accent: #f58220;
+  --color-accent-light: #f79d4d;
+  --color-accent-lighter: #fef2e8;
+}
+
+/* Service Cards */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.service-card__icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+
+.service-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.service-card__description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+/* Dental Hero Section */
+.hero--dental {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  padding: var(--space-16) 0;
+}
+
+/* Trust Indicators */
+.trust-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+}
+
+.trust-indicator__icon {
+  font-size: 2rem;
+  color: var(--color-success);
+}
+
+/* Appointment CTA */
+.appointment-cta {
+  background: linear-gradient(135deg, var(--color-accent-lighter), var(--color-accent-light));
+  padding: var(--space-10);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+/* Hours Widget */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: var(--space-3) 0;
+}
+
+.hours-table td:first-child {
+  font-weight: var(--font-weight-medium);
+}
+
+.hours-table td:last-child {
+  text-align: right;
+  color: var(--color-text-secondary);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-sticky);
+  transition: transform var(--transition-fast);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero--dental {
+    padding: var(--space-12) 0;
+  }
+
+  .whatsapp-btn {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 56px;
+    height: 56px;
+  }
+}
