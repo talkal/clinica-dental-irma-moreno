@@ -144,3 +144,14 @@
     height: 56px;
   }
 }
+
+/* Mobile service layout - ensure images always appear first */
+@media (max-width: 767px) {
+  .grid.grid-cols-2 > div:has(img) {
+    order: 1;
+  }
+
+  .grid.grid-cols-2 > div:has(h2) {
+    order: 2;
+  }
+}
